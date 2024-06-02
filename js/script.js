@@ -18,8 +18,8 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
+// Smooth scroll to anchor links
+document.addEventListener('DOMContentLoaded', function() {
   var navLinks = document.querySelectorAll('a.nav-link');
   navLinks.forEach(function (navLink) {
     navLink.addEventListener('click', function (event) {
@@ -32,5 +32,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
     });
+  });
+});
+
+// Add 'hover' class to card when it's touched
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('touchstart', function(e) {
+    e.stopPropagation(); // Prevent touch event from bubbling up to document
+
+    // Remove 'hover' class from all cards
+    document.querySelectorAll('.card.hover').forEach(card => {
+      card.classList.remove('hover');
+    });
+
+    // Add 'hover' class to this card
+    this.classList.add('hover');
+  });
+});
+
+// Remove 'hover' class from all cards when anything outside the cards is touched
+document.addEventListener('touchstart', function() {
+  document.querySelectorAll('.card.hover').forEach(card => {
+    card.classList.remove('hover');
   });
 });
