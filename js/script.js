@@ -56,3 +56,32 @@ document.addEventListener('touchstart', function() {
     card.classList.remove('hover');
   });
 });
+
+// Open email client and/or show email address when email button is clicked
+function openEmail() {
+  const emailAddress = "robbert.champagne1@gmail.com";
+
+  // Get a reference to the section
+  let section = document.getElementById("header-container");
+
+  // Check if the label already exists
+  let existingLabel = section.querySelector("label");
+  if (existingLabel) {
+    // If the label already exists, return early to prevent creating a new one
+    return;
+  }
+
+  // Create a new label element
+  let label = document.createElement("label");
+
+  // Set the text of the label to the email address
+  label.textContent = emailAddress;
+  
+  // Append the label to the section
+  section.appendChild(label);
+
+  // Remove the label after 5 seconds
+  setTimeout(function() {
+    section.removeChild(label);
+  }, 7000);
+}
