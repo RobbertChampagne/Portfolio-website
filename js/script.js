@@ -57,6 +57,7 @@ document.addEventListener('touchstart', function() {
   });
 });
 
+/*
 // Open email client and/or show email address when email button is clicked
 function openEmail() {
   const emailAddress = "robbert.champagne1@gmail.com";
@@ -84,4 +85,4 @@ function openEmail() {
   setTimeout(function() {
     section.removeChild(label);
   }, 7000);
-}
+}*/
