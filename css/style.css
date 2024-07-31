@@ -282,7 +282,7 @@ body {
 .skill-70 {
   background: linear-gradient(
     90deg,
-    rgb(34, 139, 230, 0.5) 90%,
+    rgb(34, 139, 230, 0.5) 75%,
     transparent 100%
   );
 }
@@ -351,10 +351,10 @@ body {
 }
 
 .contact-text h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 
 .contact-options {
   margin-bottom: 100px;
@@ -382,8 +382,8 @@ body {
   align-items: center;
 }
 
-#contact-email{
-    color: var(--primary-color);
+#contact-email {
+  color: var(--primary-color);
 }
 
 /* Footer */
@@ -559,9 +559,11 @@ body {
     margin-bottom: 3%;
   }
 
-
   .image-content img {
     width: 80%;
   }
 
+  
+
+  
 }
