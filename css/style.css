@@ -3,14 +3,14 @@
 /* variables */
 :root {
   /* Colors */
-  --primary-color: #228be6;
+  --primary-color: #228be6; /* 228be6 */
   --secondary-color: #54a7f0;
-  --bg-primary: #ffffff;
-  --text-color: #222222;
-  --text-color-two: #ffffff;
+  --bg-primary: #F5F5F7; /* ffffff */
+  --text-color: #4A494E; /* 222222 */
+  --text-color-two: #F5F5F7; /* ffffff */
   --bg-secondary: #228be6;
-  --card-background: #f4f4f4;
-  --bg-secondary-two: #111111;
+  --card-background: #F5F5F7; /* f4f4f4 */
+  --bg-secondary-two: #020202; /* 111111 */
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   --shadowComponents: 0 1px 8px rgba(34, 139, 230, 0.1);
@@ -234,6 +234,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  border: 1px solid red;
+
 }
 
 #skills-section {
@@ -247,6 +249,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  border: 1px solid red;
 }
 
 .skill {
@@ -388,7 +391,7 @@ body {
 
 /* Footer */
 #footer {
-  background: #111111;
+  background: #4A494E; /* 111111 */
 }
 
 #footer .container {
@@ -426,6 +429,94 @@ body {
 #footer p {
   font-size: 0.8rem;
 }
+
+/* SLIDER */
+.skills-slider {
+  width: 80%;
+  margin-top: 120px;
+  max-width: 1000px;
+  border: 1px solid blue;
+
+}
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(100px * 10 + 20px * 20); 
+  /*
+  100px * 10: This part calculates the total width of 10 slides, each 100px wide.
+  20px * 20: This part calculates the total width of the margins between the slides. If each slide has a margin of 20px on both sides, there are 20 gaps between 10 slides.
+  calc(100px * 10 + 20px * 20): The calc function combines these two calculations to get the total width of the .slider-track.
+  */
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 10 - 20px * 20)); 
+  }
+}
+
+/*
+-100px * 10: This part calculates the total negative translation needed to move 10 slides, each 100px wide, to the left.
+-20px * 20: This part calculates the total negative translation needed to move the margins between the slides to the left.
+calc(-100px * 10 - 20px * 20): The calc function combines these two calculations to get the total translation needed to move the entire .slider-track to the left.
+*/
+
+.slide{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.slide img{
+  width: 100%;
+}
+
+
+
+/*GRADIENT SHADOW SLIDER TRACK*/
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
 
 /* Responsiveness */
 
