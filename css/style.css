@@ -267,6 +267,13 @@ body {
 .skill img {
   width: 100px;
   height: 100px;
+  filter: invert(17%) sepia(9%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(85%);
+  transition: filter 0.1s ease; /* Smooth transition */
+}
+
+.skill img:hover,
+.skill img:active {
+  filter: none; /* Remove filter on hover or click */
 }
 
 .skills-article {
@@ -403,14 +410,14 @@ body {
 
 /* SLIDER */
 .skills-slider {
-  width: 80%;
-  margin-top: 50px;
+  width: 60%;
+  margin-top: 30px;
   max-width: 1000px;
   border: 1px solid var(--border);
 }
 
 .slider {
-  height: 140px;
+  height: 80px;
   margin: auto;
   position: relative;
   width: 100%;
@@ -422,13 +429,13 @@ body {
 
 .slider-track {
   display: flex;
-  width: calc(100px * 10 + 20px * 20); 
+  width: calc(60px * 8 + 20px * 16); 
   /*
   100px * 10: This part calculates the total width of 10 slides, each 100px wide.
   20px * 20: This part calculates the total width of the margins between the slides. If each slide has a margin of 20px on both sides, there are 20 gaps between 10 slides.
   calc(100px * 10 + 20px * 20): The calc function combines these two calculations to get the total width of the .slider-track.
   */
-  animation: scroll 17s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
@@ -436,7 +443,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100px * 10 - 20px * 20)); 
+    transform: translateX(calc(-60px * 8 - 20px * 16)); 
   }
 }
 
@@ -447,8 +454,8 @@ calc(-100px * 10 - 20px * 20): The calc function combines these two calculations
 */
 
 .slide{
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -482,8 +489,9 @@ calc(-100px * 10 - 20px * 20): The calc function combines these two calculations
 }
 
 .slider::after {
-  right: 0;
+  right: -5px; /* Move the shadow 5 pixels further to the right */
   top: 0;
+  width: calc(15% + 5px); /* Adjust the width to cover the additional space */
   transform: rotateZ(180deg);
 }
 
@@ -518,6 +526,10 @@ calc(-100px * 10 - 20px * 20): The calc function combines these two calculations
   }
 
   .skills-article {
+    width: 70%;
+  }
+
+  .skills-slider {
     width: 70%;
   }
 }
@@ -599,6 +611,10 @@ calc(-100px * 10 - 20px * 20): The calc function combines these two calculations
   .skills-article {
     width: 80%;
   }
+
+  .skills-slider {
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -622,5 +638,9 @@ calc(-100px * 10 - 20px * 20): The calc function combines these two calculations
 
   .image-content img {
     width: 80%;
+  }
+
+  .skills-slider {
+    width: 95%;
   }
 }
