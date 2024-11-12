@@ -20,7 +20,7 @@ function closeMenu() {
 
 // Smooth scroll to anchor links
 document.addEventListener('DOMContentLoaded', function() {
-  var navLinks = document.querySelectorAll('a.nav-link');
+  var navLinks = document.querySelectorAll('a.nav-link, a.btn.btn-secondary');
   navLinks.forEach(function (navLink) {
     navLink.addEventListener('click', function (event) {
       if (!this.hasAttribute('download')) {

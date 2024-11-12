@@ -3,14 +3,15 @@
 /* variables */
 :root {
   /* Colors */
-  --primary-color: #228be6;
+  --primary-color: #228be6; /* 228be6 */
   --secondary-color: #54a7f0;
-  --bg-primary: #ffffff;
-  --text-color: #222222;
-  --text-color-two: #ffffff;
+  --bg-primary: #F5F5F7; /* ffffff */
+  --text-color: #4A494E; /* 222222 */
+  --text-color-two: #F5F5F7; /* ffffff */
   --bg-secondary: #228be6;
-  --card-background: #f4f4f4;
-  --bg-secondary-two: #111111;
+  --card-background: #F5F5F7; /* f4f4f4 */
+  --bg-secondary-two: #020202; /* 111111 */
+  --border: #d1d1d434;
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   --shadowComponents: 0 1px 8px rgba(34, 139, 230, 0.1);
@@ -245,14 +246,14 @@ body {
 
 .skills {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .skill {
-  border: 4px solid var(--card-background);
+  border: 4px solid var(--border);
   border-radius: 5px;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   box-shadow: var(--shadowComponents);
   background-repeat: no-repeat;
@@ -263,36 +264,16 @@ body {
   font-weight: bold;
 }
 
-.skill-20 {
-  background: linear-gradient(
-    90deg,
-    rgb(34, 139, 230, 0.5) 20%,
-    transparent 30%
-  );
+.skill img {
+  width: 100px;
+  height: 100px;
+  filter: invert(17%) sepia(9%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(85%);
+  transition: filter 0.1s ease; /* Smooth transition */
 }
 
-.skill-50 {
-  background: linear-gradient(
-    90deg,
-    rgb(34, 139, 230, 0.5) 40%,
-    transparent 50%
-  );
-}
-
-.skill-70 {
-  background: linear-gradient(
-    90deg,
-    rgb(34, 139, 230, 0.5) 75%,
-    transparent 100%
-  );
-}
-
-.skill-100 {
-  background: linear-gradient(
-    90deg,
-    rgb(34, 139, 230, 0.5) 100%,
-    transparent 100%
-  );
+.skill img:hover,
+.skill img:active {
+  filter: none; /* Remove filter on hover or click */
 }
 
 .skills-article {
@@ -300,7 +281,7 @@ body {
   justify-content: flex-start;
   width: 70%;
   margin: 0 auto; /* Center the article */
-  border: 4px solid var(--card-background);
+  border: 4px solid var(--border);
   border-radius: 5px;
   margin-top: 120px;
   max-width: 1000px;
@@ -388,7 +369,7 @@ body {
 
 /* Footer */
 #footer {
-  background: #111111;
+  background: #4A494E; /* 111111 */
 }
 
 #footer .container {
@@ -427,6 +408,94 @@ body {
   font-size: 0.8rem;
 }
 
+/* SLIDER */
+.skills-slider {
+  width: 60%;
+  margin-top: 30px;
+  max-width: 1000px;
+  border: 1px solid var(--border);
+}
+
+.slider {
+  height: 80px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: var(--shadowComponents);
+}
+
+.slider-track {
+  display: flex;
+  width: calc(60px * 8 + 20px * 16); 
+  /*
+  100px * 10: This part calculates the total width of 10 slides, each 100px wide.
+  20px * 20: This part calculates the total width of the margins between the slides. If each slide has a margin of 20px on both sides, there are 20 gaps between 10 slides.
+  calc(100px * 10 + 20px * 20): The calc function combines these two calculations to get the total width of the .slider-track.
+  */
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-60px * 8 - 20px * 16)); 
+  }
+}
+
+/*
+-100px * 10: This part calculates the total negative translation needed to move 10 slides, each 100px wide, to the left.
+-20px * 20: This part calculates the total negative translation needed to move the margins between the slides to the left.
+calc(-100px * 10 - 20px * 20): The calc function combines these two calculations to get the total translation needed to move the entire .slider-track to the left.
+*/
+
+.slide{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.slide img{
+  width: 100%;
+}
+
+
+
+/*GRADIENT SHADOW SLIDER TRACK*/
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: -5px; /* Move the shadow 5 pixels further to the right */
+  top: 0;
+  width: calc(15% + 5px); /* Adjust the width to cover the additional space */
+  transform: rotateZ(180deg);
+}
+
+
 /* Responsiveness */
 
 @media (max-width: 1400px) {
@@ -457,6 +526,10 @@ body {
   }
 
   .skills-article {
+    width: 70%;
+  }
+
+  .skills-slider {
     width: 70%;
   }
 }
@@ -538,6 +611,10 @@ body {
   .skills-article {
     width: 80%;
   }
+
+  .skills-slider {
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -561,5 +638,9 @@ body {
 
   .image-content img {
     width: 80%;
+  }
+
+  .skills-slider {
+    width: 95%;
   }
 }
