@@ -492,6 +492,11 @@ body {
   scrollbar-color: #4A494E var(--bg-primary); /* Thumb and track color */
 }
 
+.solutions-section-title{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1000px) {
   .solution {
     grid-template-columns: repeat(2, 1fr);
