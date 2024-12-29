@@ -332,18 +332,23 @@ body {
 }
 
 #skills-list li > * {
-  display: inline; /* Display nested elements inline */
+  /*display: inline; /* Display nested elements inline */
+  display: flex;
+  flex-wrap: wrap; /* Allow child elements to wrap to a new line */
+  align-items: center; /* Align items vertically in the center */
 }
 
-.extra-info {
+.extra-info, .skill-status {
   font-size: 0.9em;
   font-weight: normal;
+  display: inline-block; /* Ensure they are inline by default */
 }
 
 .skill-status {
   font-size: 0.8em;
   font-style: italic;
   font-weight: normal;
+  margin-left: 0px;
 }
 
 @media (max-width: 800px) {
