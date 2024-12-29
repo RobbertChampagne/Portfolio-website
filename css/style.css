@@ -173,6 +173,9 @@ body {
   height: 2px;
   background-color: var(--border);
   margin: 5.5rem auto;
+  margin-bottom: 150px;
+  margin-top: 150px;
+
 }
 /* Projects */
 #projects {
@@ -495,6 +498,10 @@ body {
 .solutions-section-title{
   width: 100%;
   margin-bottom: 10px;
+}
+
+#solutions-end-text{
+  margin-top: 80px;
 }
 
 @media (max-width: 1000px) {
