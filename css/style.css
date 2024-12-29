@@ -11,7 +11,7 @@
   --bg-secondary: #228be6;
   --card-background: #F5F5F7; /* f4f4f4 */
   --bg-secondary-two: #020202; /* 111111 */
-  --border: #d1d1d434;
+  --border: #d1d1d434; /*d1d1d434*/
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   --shadowComponents: 0 1px 8px rgba(34, 139, 230, 0.1);
@@ -171,8 +171,11 @@ body {
 .division {
   width: 80%;
   height: 2px;
-  background-color: var(--card-background);
+  background-color: var(--border);
   margin: 5.5rem auto;
+  margin-bottom: 150px;
+  margin-top: 150px;
+
 }
 /* Projects */
 #projects {
@@ -283,13 +286,8 @@ body {
   margin: 0 auto; /* Center the article */
   border: 4px solid var(--border);
   border-radius: 5px;
-  margin-top: 120px;
+  margin-top: 40px;
   max-width: 1000px;
-}
-
-.text-content {
-  flex: 3;
-  margin-right: 20px;
 }
 
 .image-content {
@@ -315,6 +313,232 @@ body {
   text-decoration: underline;
   color: var(--primary-color);
   font-weight: var(--weight-semibold);
+}
+
+/* Skill list */
+#skills-list {
+  list-style-type: disc; /* Ensure bullets are shown */
+}
+
+#skills-list li {
+  display: flex;
+  flex-wrap: wrap;
+  display: list-item;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#skills-list li > * {
+  display: inline; /* Display nested elements inline */
+}
+
+.extra-info {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.skill-status {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  #skills-list {
+    margin-left: 30px; /* Adjust padding for smaller screens */
+  }
+  
+  #skills-list li {
+    white-space: normal; /* Allow text to wrap normally */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+}
+
+/* Solutions */
+
+#solutions-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 5rem;
+}
+
+#solutions-content-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#solutions-content-text h2 {
+  margin-bottom: 0px;
+  font-size: 48px;
+}
+
+#solutions-content-text p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.solution {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.9rem;
+  width: 100%;
+  max-width: var(--width-large);
+}
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  justify-content:  flex-start;
+  padding: 1rem;
+  border: 1px solid #43434634;
+  border-radius: 5px;
+  box-shadow: var(--shadowComponents);
+  background-color: var(--card-background);
+
+  max-height: 560px; /* Set a maximum height for the card */
+  overflow: hidden;
+}
+
+.solution-card img { /* One image per card */
+  width: 100%;
+  height: 25%; /* Set the image height to 1/3 of the card */
+  object-fit: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.solution-info .image-container { /* Two images per card */
+  display: flex;
+  justify-content: space-between;
+  height: 25%; /* Set the image height to 1/3 of the card */
+}
+
+.solution-info .image-container img { /* Two images per card */
+  width: 49%; /* Adjust width to fit two images side by side */
+  height: 100%;
+}
+
+.solution-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.solution-bio {
+  flex: 1;
+  overflow-y: auto; /* Make the text scrollable if it exceeds the max height */
+  padding: 1rem 0;
+}
+
+.solution-bio h3 {
+  margin-top: 0;
+}
+
+.solution-tags {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to a new line */
+  gap: 0.5rem; /* Add space between tags */
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #43434634;
+  border-radius: 20px;
+  background-color: #4A494E;
+  color: var(--text-color-two);
+  box-shadow: var(--shadowComponents);
+  font-size: 0.9rem;
+  font-weight: var(--weight-semibold);
+}
+
+.bullet-list {
+  list-style-type: disc; /* Add bullets to the list */
+  padding-left: 20px; /* Add some padding to align the bullets */
+}
+
+.bullet-list li {
+  margin-bottom: 5px; /* Add some space between list items */
+}
+
+/* Custom scrollbar styles */
+.solution-bio::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.solution-bio::-webkit-scrollbar-track {
+  background: #4A494E; /* Background of the scrollbar track */
+  border-radius: 5px;
+}
+
+.solution-bio::-webkit-scrollbar-thumb {
+  background: #4A494E; /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for the thumb */
+}
+
+.solution-bio::-webkit-scrollbar-thumb:hover {
+  background: #4A494E; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox scrollbar styles */
+.solution-bio {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #4A494E var(--bg-primary); /* Thumb and track color */
+}
+
+.solutions-section-title{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#solutions-end-text{
+  margin-top: 80px;
+}
+
+@media (max-width: 1000px) {
+  .solution {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .solution {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* About */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 5rem;
+}
+
+#about-content-text h2{
+  margin-bottom: 0px;
+  font-size: 48px;
+}
+
+#about-article{
+  margin-top: 20px;
 }
 
 /* Contact */
@@ -429,7 +653,7 @@ body {
 
 .slider-track {
   display: flex;
-  width: calc(60px * 8 + 20px * 16); 
+  width: calc(1100px * 11 + 20px * 22); 
   /*
   100px * 10: This part calculates the total width of 10 slides, each 100px wide.
   20px * 20: This part calculates the total width of the margins between the slides. If each slide has a margin of 20px on both sides, there are 20 gaps between 10 slides.
@@ -443,7 +667,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-60px * 8 - 20px * 16)); 
+    transform: translateX(calc(-60px * 11 - 20px * 22)); 
   }
 }
 
