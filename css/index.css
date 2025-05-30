@@ -1,0 +1,109 @@
+.top-box {
+  background: #f1f1f1; /* White background */
+}
+
+.bottom-box {
+  background: #cbc8c1; /* Gray background */
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+  gap: 20px; /* Add spacing between elements */
+  border: 2px solid #bbb; /* Optional: Add border for visual separation */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.section-title-contact {
+  font-size: 24px; /* Slightly larger title */
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.contact-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width on mobile */
+}
+
+.contact-text {
+  text-align: center; /* Center text */
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.contact-item {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center the image and text */
+  gap: 20px; /* Add spacing between the image and text */
+  margin-bottom: 10px; /* Space between contact items */
+}
+
+.contact-item-image {
+  width: 20px;
+  height: auto;
+}
+
+.contact-container-image {
+  width: 100%; /* Full width on mobile */
+  display: flex;
+  justify-content: center;
+}
+
+.contact-image img {
+  width: 100%; /* Full width for the image */
+  max-width: 400px; /* Optional: Limit max width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.contact-links{
+    word-break: break-word; 
+}
+
+@media (min-width: 768px) {
+  .contact-wrapper {
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Full height of the parent container */
+    margin-top: 30px;
+  }
+
+  .contact-section {
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    align-items: flex-start;
+    justify-content: space-between; /* Space out the text and image */
+    width: 80%;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for desktop */
+    justify-content: space-between;
+  }
+
+  .contact-container-text {
+    width: 50%; /* Left side on desktop */
+    margin-left: 50px; /* Shift the text container to the right */
+  }
+
+  .contact-container-image {
+    width: 30%; /* Right side on desktop */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+    margin-right: 20px; /* Add space to push the image further to the right */
+  }
+
+  .contact-image img {
+    width: 100%; /* Full width for the image */
+    max-width: 300px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

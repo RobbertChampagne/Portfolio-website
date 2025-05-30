@@ -1,0 +1,168 @@
+.back-home-button {
+    position: absolute; /* Position relative to .top-box */
+    top: 0px; /* Adjust as needed */
+    left: 4px; /* Adjust as needed */
+    z-index: 20; /* Ensure it's above other top-box content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-arrow-icon {
+    width: 25px; /* Adjust the size of the arrow */
+    height: 20px;
+    stroke: #000; /* Set the arrow color */
+}
+
+.top-box {
+  background: #cbc8c1; /* White background */
+}
+
+.page-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: -60px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.bottom-box {
+  background: #f1f1f1; /* Gray background */
+}
+
+.ddql-vs-pyramid-section{
+    margin-top: 40px;
+}
+
+.section-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.intro-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 70ch; /* Optimal line length */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-list {
+    display: grid;
+    gap: 25px; /* Space between feature items */
+    padding: 0;
+}
+
+#ddql-images {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center; /* Center images vertically */
+    align-items: center; /* Center images horizontally */
+    gap: 20px; /* Add space between the images */
+    width: 100%; /* Ensure the container spans the full width */
+    height: auto; /* Adjust height dynamically */
+    padding: 20px; /* Add padding around the images */
+    box-sizing: border-box; /* Include padding in the width/height calculation */
+    margin-top: 20px;
+}
+
+#DDQL {
+    width: 125%; /* Make the image responsive */
+}
+
+#ddql-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+
+}
+
+.ddql-section {
+    padding: 20px;
+    border-radius: 0px;
+    text-align: center;
+    color: #ffffff; /* White text for better contrast */
+}
+
+.ddql-section:nth-child(1) {
+    background-color: #aaaea3;
+    border-radius: 0px;
+}
+
+.ddql-section:nth-child(2) {
+    background-color: #86948b;
+    border-radius: 0px;
+}
+
+.ddql-section:nth-child(3) {
+    background-color: #637b78;
+    border-radius: 0px;
+}
+
+.ddql-section:nth-child(4) {
+    background-color: #456268;
+    border-radius: 0px;
+}
+
+.ddql-section:nth-child(5) {
+    background-color: #2f4858;
+    border-radius: 0px;
+}
+
+/* Desktop styles */
+@media (min-width: 700px) {
+
+    .back-home-button {
+        position: fixed; /* Fixed position relative to the viewport */
+        top: 20px; 
+        left: 20px; 
+    }
+
+    .back-arrow-icon {
+        width: 30px; 
+        height: 20px;
+       
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .ddql-vs-pyramid-section{
+        margin-top: 50px;
+    }
+
+    .section-heading {
+        font-size: 1.4rem;
+    }
+
+    #ddql-images {
+        margin-top: 80px;
+    }
+
+    #DDQL {
+        width: 90%; /* Make the image responsive */
+    }
+
+    #ddql-content {
+        gap: 20px;
+        padding: 150px;
+        margin-top: -50px;
+    }
+    
+    .ddql-section {
+        padding: 20px;
+    }
+
+  
+}
+
+  
