@@ -1,19 +1,24 @@
 html,
 body {
-  height: 100%; /* Ensure the html and body take full height */
+  height: 100%;
+  /* Ensure the html and body take full height */
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: #d1d1d1;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align to the top to allow scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  align-items: flex-start;
+  /* Align to the top to allow scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari, Edge) */
+  display: none;
+  /* Hide scrollbar in WebKit browsers (Chrome, Safari, Edge) */
 }
 
 .main-box {
@@ -24,7 +29,8 @@ body::-webkit-scrollbar {
   border: 1px solid #d1d1d1;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   border-radius: 0px;
-  overflow: visible; /* Allow content to overflow */
+  overflow: visible;
+  /* Allow content to overflow */
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -32,7 +38,8 @@ body::-webkit-scrollbar {
 .top-box {
   position: relative;
   width: 100%;
-  height: 30vh; /* Fixed height for the white box */
+  height: 30vh;
+  /* Fixed height for the white box */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +51,8 @@ body::-webkit-scrollbar {
   width: 100%;
   padding: 24px;
   box-sizing: border-box;
-  flex-grow: 1; /* Allow the gray box to grow dynamically */
+  flex-grow: 1;
+  /* Allow the gray box to grow dynamically */
 }
 
 .top-left-text {
@@ -62,15 +70,19 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 24px;
   right: 24px;
-  font-size: 0.6rem; /* Smaller text for mobile */
+  font-size: 0.8rem;
+  /* Smaller text for mobile */
   font-weight: bold;
   color: #222;
   text-align: left;
   letter-spacing: 0.02em;
   z-index: 20;
-  max-width: 100px; /* Restrict width to force wrapping */
-  word-break: break-word; /* Ensure proper word wrapping */
-  line-height: 1.2; /* Adjust line spacing for readability */
+  max-width: 100px;
+  /* Restrict width to force wrapping */
+  word-break: break-word;
+  /* Ensure proper word wrapping */
+  line-height: 1.2;
+  /* Adjust line spacing for readability */
 }
 
 .centered-image {
@@ -100,7 +112,8 @@ body::-webkit-scrollbar {
 }
 
 .section-title {
-  font-size: 1.2rem; /* Slightly larger title */
+  font-size: 1.2rem;
+  /* Slightly larger title */
   font-weight: bold;
   margin-bottom: 25px;
   color: #000;
@@ -109,22 +122,26 @@ body::-webkit-scrollbar {
 .underline {
   /*text-decoration: underline; 
     text-underline-offset: 12px; /* Adjust the space between the text and the underline */
-  position: relative; /* Required for positioning the pseudo-element */
+  position: relative;
+  /* Required for positioning the pseudo-element */
   text-decoration: none;
 }
 
 .underline::after {
-  content: ""; /* Create the custom underline */
+  content: "";
+  /* Create the custom underline */
   position: absolute;
   left: 0;
-  bottom: 0; /* Position the underline at the bottom of the text */
-  width: 105%; /* Match the width of the text */
-  height: 3px; /* Thickness of the underline */
-  background: linear-gradient(
-    to right,
-    black 50%,
-    transparent 100%
-  ); /* Gradient effect */
+  bottom: 0;
+  /* Position the underline at the bottom of the text */
+  width: 105%;
+  /* Match the width of the text */
+  height: 3px;
+  /* Thickness of the underline */
+  background: linear-gradient(to right,
+      black 50%,
+      transparent 100%);
+  /* Gradient effect */
   bottom: -12px;
 }
 
@@ -141,40 +158,57 @@ body::-webkit-scrollbar {
 }
 
 .nav-links {
-  text-underline-offset: 4px; /* Adjust the space between the text and the underline */
-  color: #2f4858; /* Keep the link black */
+  text-underline-offset: 4px;
+  /* Adjust the space between the text and the underline */
+  color: #2f4858;
+  /* Keep the link black */
   font-weight: bold;
 }
 
 hr {
-  border: none; /* Removes default border */
-  border-top: 1px solid #aaa; /* Your desired line style */
-  margin: 32px auto; /* Sets top/bottom margin, and auto for left/right to center it */
-  width: 60%; /* Sets the width to 50% of its parent container (which is typically the body/viewport) */
+  border: none;
+  /* Removes default border */
+  border-top: 1px solid #aaa;
+  /* Your desired line style */
+  margin: 32px auto;
+  /* Sets top/bottom margin, and auto for left/right to center it */
+  width: 60%;
+  /* Sets the width to 50% of its parent container (which is typically the body/viewport) */
 }
 
 /* Quote Section */
 .quote-section {
-  margin: 30px auto; /* Adjust vertical spacing as needed */
+  margin: 30px auto;
+  /* Adjust vertical spacing as needed */
   margin-bottom: 100px;
   padding: 20px;
-  max-width: 800px; /* Limit width for readability */
-  text-align: left; /* Center the quote */
-  color: #222; /* Default text color */
+  max-width: 800px;
+  /* Limit width for readability */
+  text-align: left;
+  /* Center the quote */
+  color: #222;
+  /* Default text color */
 }
 
 .quote-section .quote-marks {
-  font-size: 4em; /* Large size for the quotation marks */
-  color: #222; /* A distinct color, perhaps matching your brand/highlight color */
-  display: block; /* Ensure it's on its own line */
-  margin-bottom: -50px; /* Space between marks and text */
+  font-size: 4em;
+  /* Large size for the quotation marks */
+  color: #222;
+  /* A distinct color, perhaps matching your brand/highlight color */
+  display: block;
+  /* Ensure it's on its own line */
+  margin-bottom: -50px;
+  /* Space between marks and text */
 }
 
 .quote-text {
-  font-size: 1.3em; /* Larger font size for the main quote */
-  font-weight: 600; /* Make it bold */
+  font-size: 1.3em;
+  /* Larger font size for the main quote */
+  font-weight: 600;
+  /* Make it bold */
   line-height: 1.4;
-  margin-bottom: 20px; /* Space between quote and author */
+  margin-bottom: 20px;
+  /* Space between quote and author */
 }
 
 .quote-author {
@@ -182,21 +216,27 @@ hr {
   font-size: 1.1em;
   font-style: italic;
   color: #666;
-  margin-bottom: 20px; /* Space between author and image */
+  margin-bottom: 20px;
+  /* Space between author and image */
 }
 
 .quote-section .quote-image {
   max-width: 100%;
   height: auto;
-  display: block; /* Stack below on mobile */
+  display: block;
+  /* Stack below on mobile */
   margin-right: auto;
 }
 
 .footer-hr {
-  border: none; /* Removes default border */
-  border-top: 1px solid #000; /* Your desired line style */
-  margin: 32px auto; /* Sets top/bottom margin, and auto for left/right to center it */
-  width: 100%; /* Sets the width to 50% of its parent container (which is typically the body/viewport) */
+  border: none;
+  /* Removes default border */
+  border-top: 1px solid #000;
+  /* Your desired line style */
+  margin: 32px auto;
+  /* Sets top/bottom margin, and auto for left/right to center it */
+  width: 100%;
+  /* Sets the width to 50% of its parent container (which is typically the body/viewport) */
 }
 
 /* LEGENDE */
@@ -246,8 +286,10 @@ hr {
 
 /* Work Experience Section */
 .work-experience-section {
-  padding: 10px; /* Base padding for mobile */
-  margin-top: 0px; /* Space from previous section */
+  padding: 10px;
+  /* Base padding for mobile */
+  margin-top: 0px;
+  /* Space from previous section */
 }
 
 .work-experience-section h2 {
@@ -258,9 +300,11 @@ hr {
 
 .timeline {
   position: relative;
-  padding-left: 20px; /* Mobile space for the vertical line */
+  padding-left: 20px;
+  /* Mobile space for the vertical line */
   margin-top: 20px;
-  min-height: 350px; /* Set a minimum height for all timelines */
+  min-height: 350px;
+  /* Set a minimum height for all timelines */
   /* Adjust this value based on the height of your first timeline to match its length */
 }
 
@@ -268,8 +312,10 @@ hr {
   /* The line */
   content: "";
   position: absolute;
-  top: -40px; /* Start of the line */
-  left: 0; /* Mobile line position */
+  top: -40px;
+  /* Start of the line */
+  left: 0;
+  /* Mobile line position */
   width: 1px;
   background-color: #bbb;
   height: 100%;
@@ -277,25 +323,32 @@ hr {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 30px; /* Base space between items */
-  padding-left: 20px; /* Mobile space for the circle */
+  margin-bottom: 30px;
+  /* Base space between items */
+  padding-left: 20px;
+  /* Mobile space for the circle */
 }
 
 .timeline-item::before {
   /* Dot on the line */
   content: "";
   position: absolute;
-  top: 5px; /* Mobile circle vertical alignment */
-  left: -25px; /* Mobile circle horizontal position on the line */
-  width: 10px; /* Mobile circle size */
-  height: 10px; /* Mobile circle size */
+  top: 5px;
+  /* Mobile circle vertical alignment */
+  left: -25px;
+  /* Mobile circle horizontal position on the line */
+  width: 10px;
+  /* Mobile circle size */
+  height: 10px;
+  /* Mobile circle size */
   background-color: #bbb;
   border-radius: 50%;
   border: 1px solid #bbb;
 }
 
 .timeline-date {
-  font-size: 0.85rem; /* Mobile date font size */
+  font-size: 0.85rem;
+  /* Mobile date font size */
   color: #666;
   margin-bottom: 5px;
   font-weight: bold;
@@ -303,19 +356,22 @@ hr {
 
 .timeline-content h3 {
   margin: 0;
-  font-size: 1rem; /* Mobile job title font size */
+  font-size: 1rem;
+  /* Mobile job title font size */
   color: #222;
 }
 
 .timeline-content .company {
-  font-size: 0.9rem; /* Mobile company font size */
+  font-size: 0.9rem;
+  /* Mobile company font size */
   color: #555;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
 .timeline-content .description {
-  font-size: 0.85rem; /* Mobile description font size */
+  font-size: 0.85rem;
+  /* Mobile description font size */
   line-height: 1.5;
   color: #444;
 }
@@ -362,13 +418,16 @@ hr {
   }
 
   .top-box {
-    height: 40vh; /* Keep the white box height fixed */
+    height: 40vh;
+    /* Keep the white box height fixed */
   }
 
   .top-right-text {
     font-size: 1.05rem;
-    max-width: none; /* Remove width restriction */
-    word-break: normal; /* Allow normal word wrapping */
+    max-width: none;
+    /* Remove width restriction */
+    word-break: normal;
+    /* Allow normal word wrapping */
     font-weight: normal;
   }
 
@@ -397,7 +456,8 @@ hr {
   }
 
   .section-title {
-    font-size: 1.2rem; /* Larger title for desktop */
+    font-size: 1.2rem;
+    /* Larger title for desktop */
   }
 
   .text-paragraph {
@@ -406,50 +466,65 @@ hr {
   }
 
   .work-experience-section {
-    padding: 30px; /* Increased padding for desktop */
+    padding: 30px;
+    /* Increased padding for desktop */
     margin-top: 0px;
   }
 
   .work-experience-section h2 {
-    font-size: 1.5rem; /* Larger heading on desktop */
-    margin-bottom: 60px; /* More space below heading on desktop */
+    font-size: 1.5rem;
+    /* Larger heading on desktop */
+    margin-bottom: 60px;
+    /* More space below heading on desktop */
   }
 
   .timeline {
-    padding-left: 40px; /* More space for the line on desktop */
+    padding-left: 40px;
+    /* More space for the line on desktop */
   }
 
   .timeline::before {
     /* The line */
-    left: 10px; /* Adjust line position for desktop */
+    left: 10px;
+    /* Adjust line position for desktop */
   }
 
   .timeline-item {
-    margin-bottom: 40px; /* More space between items on desktop */
-    padding-left: 30px; /* More space for the circle on desktop */
+    margin-bottom: 40px;
+    /* More space between items on desktop */
+    padding-left: 30px;
+    /* More space for the circle on desktop */
   }
 
   .timeline-item::before {
-    left: -36.4px; /* Adjust circle position for desktop */
-    width: 12px; /* Larger circle on desktop */
-    height: 12px; /* Larger circle on desktop */
-    top: 8px; /* Adjust vertical alignment for larger circle/fonts */
+    left: -36.4px;
+    /* Adjust circle position for desktop */
+    width: 12px;
+    /* Larger circle on desktop */
+    height: 12px;
+    /* Larger circle on desktop */
+    top: 8px;
+    /* Adjust vertical alignment for larger circle/fonts */
   }
 
   .timeline-date {
-    font-size: 0.95rem; /* Larger date font on desktop */
+    font-size: 0.95rem;
+    /* Larger date font on desktop */
   }
 
   .timeline-content h3 {
-    font-size: 1.1rem; /* Larger job title on desktop */
+    font-size: 1.1rem;
+    /* Larger job title on desktop */
   }
 
   .timeline-content .company {
-    font-size: 1rem; /* Larger company font on desktop */
+    font-size: 1rem;
+    /* Larger company font on desktop */
   }
 
   .timeline-content .description {
-    font-size: 0.95rem; /* Larger description font on desktop */
+    font-size: 0.95rem;
+    /* Larger description font on desktop */
   }
 
   .quote-section {
@@ -460,11 +535,13 @@ hr {
     margin-bottom: 120px;
     padding: 0px;
     max-width: 400px;
-    text-align: left; /* Allows text to align left */
+    text-align: left;
+    /* Allows text to align left */
   }
 
   .quote-section .text-container {
-    align-self: flex-start; /* Left-align inside centered parent */
+    align-self: flex-start;
+    /* Left-align inside centered parent */
     max-width: 700px;
     margin-bottom: 0px;
   }
@@ -484,6 +561,7 @@ hr {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center image */
+    margin: 0 auto;
+    /* Center image */
   }
 }

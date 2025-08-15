@@ -80,8 +80,8 @@
     flex-direction: column;
     gap: 20px;
     padding: 5px;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    margin-top: 0px; /*50*/
+    margin-bottom: 0px; /* 150 */
 
 }
 
@@ -156,13 +156,14 @@
         gap: 20px;
         padding: 150px;
         margin-top: -50px;
+        margin-bottom: -100px; /* 150 */
+
     }
     
     .ddql-section {
         padding: 20px;
     }
 
-  
 }
 
   
